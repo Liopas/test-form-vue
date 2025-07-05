@@ -5,7 +5,7 @@ import FormGenerator from '@/components/FormGenerator.vue';
 
 <template>
     <div>
-        Регистрация машин
+        Регистрация недвижимости
     </div>
     <FormGenerator />
 </template>

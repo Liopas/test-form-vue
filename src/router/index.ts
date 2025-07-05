@@ -19,7 +19,11 @@ const router = createRouter({
       name: 'animal',
       component: () => import('../views/AnimalView.vue'),
     },
-
+    {
+      path: '/estate',
+      name: 'estate',
+      component: () => import('../views/EstateView.vue'),
+    },
   ],
 })
 
