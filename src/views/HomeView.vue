@@ -22,8 +22,12 @@ main {
   * {
     width: 300px;
     text-align: center;
-    background-color: rgb(39, 28, 143);
+
     margin: 5px;
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+    padding: 3px;
   }
 }
 </style>
