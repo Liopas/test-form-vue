@@ -11,18 +11,14 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style lang="scss" scoped>
-$card-wi: 165px;
-
 main {
   display: flex;
   flex-direction: column;
   justify-self: center;
 
-
   * {
     width: 300px;
     text-align: center;
-
     margin: 5px;
     text-decoration: none;
     color: hsla(160, 100%, 37%, 1);
