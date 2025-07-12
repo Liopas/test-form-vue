@@ -13,8 +13,8 @@ const form2DataSet = {
 </script>
 
 <template>
-    <div>
-        Регистрация животных
+    <div class="title-form">
+        <h1>Регистрация животных</h1>
     </div>
     <FormGenerator v-bind="form2DataSet" />
 </template>

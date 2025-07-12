@@ -91,7 +91,7 @@ onMounted(() => {
     margin: auto;
     border-radius: 12px;
     padding: 5px;
-    outline: 1px solid rgb(32, 112, 61);
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 .el {

@@ -21,9 +21,10 @@ main {
     text-align: center;
     margin: 5px;
     text-decoration: none;
-    color: hsla(160, 100%, 37%, 1);
     transition: 0.4s;
     padding: 3px;
+    font-weight: 700;
+    font-size: 20px;
   }
 }
 </style>

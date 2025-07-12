@@ -1,15 +1,20 @@
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+body {
+  background-color: rgb(212, 226, 248);
 }
 
-/* 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title-form {
+  text-align: center;
+  text-decoration: underline solid #34dbd3;
+  text-underline-offset: 10px;
+}
+
+a {
+  color: rgb(0, 153, 102);
   transition: 0.4s;
   padding: 3px;
 }
@@ -18,4 +23,4 @@ a,
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
-} */
+}
