@@ -13,7 +13,7 @@ const props = defineProps({
     formCollect: {
         type: Object,
         required: true
-    }
+    },
 })
 
 const Collect = ref({ ...props.formCollect });
@@ -49,8 +49,8 @@ onMounted(() => {
                 <label for="inpt">
                     <slot :name="item.name">{{ item.label }}</slot>
                 </label>
-                <input v-model="Collect[item.name]" type="text" :placeholder="item.placeholder" name="inpt" id="inpt"
-                    :maxlength="item.max" required />
+                <input v-model="Collect[item.name]" type="text" :placeholder="item.placeholder || 'Введите'" name="inpt"
+                    id="inpt" :maxlength="item.max || 26" required />
             </div>
 
             <div v-if="item.mode === 'select'">
@@ -74,8 +74,8 @@ onMounted(() => {
                 <label for="area">
                     <slot :name="item.name">{{ item.label }}</slot>
                 </label>
-                <textarea v-model="Collect[item.name]" :placeholder="item.placeholder" id="area" name="area"
-                    :rows="item.row" required></textarea>
+                <textarea v-model="Collect[item.name]" :placeholder="item.placeholder || 'Введите'" id="area"
+                    name="area" :rows="item.row || 4" required></textarea>
             </div>
 
             <div class="bot" v-if="item.mode === 'buttons'">

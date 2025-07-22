@@ -13,7 +13,10 @@ const form2Data = [
         label: "Вид:",
         array: ["Кошка", "Кролик", "Собака", "Хомяк", "Попугай"]
     },
-    { name: "description", mode: "textarea", label: "описание" },
+    {
+        name: "description", mode: "textarea", label: "описание",
+        placeholder: "Окрас Возраст Порода Пол Размеры Особые приметы Состояние здоровья"
+    },
     { mode: "buttons" }
 ];
 

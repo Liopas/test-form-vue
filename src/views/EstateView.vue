@@ -8,7 +8,7 @@ const formN = route.name;
 const form3Data = [
     { name: "name_1", mode: "input", label: "Имя:" },
     { name: "name_2", mode: "input", label: "Фамилия:" },
-    { name: "name_3", mode: "input", label: "Отчество:" },
+    { name: "name_3", mode: "input", label: "Отчество:", placeholder: "Введите, если есть" },
     {
         name: "country",
         mode: "select",
@@ -16,7 +16,7 @@ const form3Data = [
         array: ["Россия", "Беларусь", "Казахстан", "Армения", "Кыргызстан"]
     },
     { name: "sign", mode: "checkbox", label: "Согласен с условиями обработки данных" },
-    { name: "address", mode: "textarea", label: "Адрес" },
+    { name: "address", mode: "textarea", label: "Адрес", row: 1 },
     { mode: "buttons" }
 ];
 

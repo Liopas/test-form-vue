@@ -6,7 +6,7 @@ const route = useRoute()
 const formN = route.name;
 
 const form1Data = [
-    { name: "number", mode: "input", label: "Номер:" },
+    { name: "number", mode: "input", label: "Номер:", placeholder: "1 буква, 3 цифры, 2 буквы", max: 6 },
     { name: "color", mode: "input", label: "Цвет:" },
     {
         name: "brand",
