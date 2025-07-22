@@ -5,12 +5,12 @@ export default createStore({
     forms: [],
   },
   getters: {
-    getForm: (state) => (formName) => {
-      return state.forms.find((item) => item.formN === formName)
+    getForm: (state) => (formN) => {
+      return state.forms.find((item) => item.formName === formN)
     },
   },
   mutations: {
-    adds(state, form, key = 'formN') {
+    adds(state, form, key = 'formName') {
       const index = state.forms.findIndex((item) => item[key] === form[key])
       if (index !== -1) {
         state.forms[index] = form
@@ -18,8 +18,8 @@ export default createStore({
         state.forms.push(form)
       }
     },
-    del_form(state, Name) {
-      state.forms = state.forms.filter((item) => item.formN !== Name)
+    del_form(state, formN) {
+      state.forms = state.forms.filter((item) => item.formName !== formN)
     },
   },
 })
