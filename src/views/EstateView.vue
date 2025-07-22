@@ -8,7 +8,7 @@ const formN = route.name;
 const form3Data = [
     { name: "name_1", mode: "input", label: "Имя:" },
     { name: "name_2", mode: "input", label: "Фамилия:" },
-    { name: "name_3", mode: "input", label: "Отчество:", placeholder: "Введите, если есть" },
+    { name: "name_3", mode: "input", label: "Отчество:", placeholder: "если есть" },
     {
         name: "country",
         mode: "select",
