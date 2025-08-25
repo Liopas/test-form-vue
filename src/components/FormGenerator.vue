@@ -46,36 +46,37 @@ onMounted(() => {
         <div v-for="(item, index) in props.formData" :key="index">
 
             <div v-if="item.mode === 'input'">
-                <label for="inpt">
+                <label :for="'input-' + item.name">
                     <slot :name="item.name">{{ item.label }}</slot>
                 </label>
-                <input v-model="Collect[item.name]" type="text" :placeholder="item.placeholder || 'Введите'" name="inpt"
-                    id="inpt" :maxlength="item.max || 26" required />
+                <input v-model="Collect[item.name]" type="text" :placeholder="item.placeholder || 'Введите'"
+                    :name="'input-' + item.name" :id="'input-' + item.name" :maxlength="item.max || 26" required />
             </div>
 
             <div v-if="item.mode === 'select'">
-                <label for="selc">
+                <label :for="'selc-' + item.name">
                     <slot :name="item.name">{{ item.label }}</slot>
                 </label>
-                <select v-model="Collect[item.name]" name="selc" required>
+                <select v-model="Collect[item.name]" :name="'selc-' + item.name" :id="'selc-' + item.name" required>
                     <option value selected disabled hidden style='display: none'>-Выберите-</option>
                     <option v-for="(opt, index) in item.array" :key="index" :value="opt">{{ opt }}</option>
                 </select>
             </div>
 
             <div v-if="item.mode === 'checkbox'">
-                <input v-model="Collect[item.name]" type="checkbox" id="chck" name="chck" style="accent-color: green" />
-                <label for="chck">
+                <input v-model="Collect[item.name]" type="checkbox" :name="'chck-' + item.name"
+                    :id="'chck-' + item.name" style="accent-color: green" />
+                <label :for="'chck-' + item.name">
                     <slot :name="item.name">{{ item.label }}</slot>
                 </label>
             </div>
 
             <div v-if="item.mode === 'textarea'">
-                <label for="area">
+                <label :for="'area-' + item.name">
                     <slot :name="item.name">{{ item.label }}</slot>
                 </label>
-                <textarea v-model="Collect[item.name]" :placeholder="item.placeholder || 'Введите'" id="area"
-                    name="area" :rows="item.row || 4" required></textarea>
+                <textarea v-model="Collect[item.name]" :placeholder="item.placeholder || 'Введите'"
+                    :name="'area-' + item.name" :id="'area-' + item.name" :rows="item.row || 4" required></textarea>
             </div>
 
             <div class="bot" v-if="item.mode === 'buttons'">
